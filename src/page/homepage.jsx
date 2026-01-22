@@ -1,4 +1,5 @@
 import FifthPage from "./fifthPage";
+import FooterPart from "./footerPart";
 import FourthPart from "./fourthPart";
 import FristPart from "./fristPart";
 import SecondPart from "./secondPart";
@@ -13,6 +14,7 @@ export default function Homepage() {
         <ThirdPart/>
         <FourthPart/>
         <FifthPage />
+        <FooterPart />
     </div>
   );
 }

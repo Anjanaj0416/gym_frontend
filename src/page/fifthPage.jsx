@@ -4,7 +4,7 @@ import { ImCross } from "react-icons/im";
 
 export default function FifthPage() {
     return (
-        <div className="w-full h-[780px] flex flex-col ">
+        <div className="w-full h-[800px] flex flex-col ">
             <div className="w-full h-[35px] bg-red-600 flex items-center justify-center">
                 <div className="w-[50%] h-full bg-black flex items-center justify-center">
                     <h1 className="text-5xl text-white font-bold tracking-[12px]">MEMBER PRICING</h1>
