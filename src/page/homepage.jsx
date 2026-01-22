@@ -3,6 +3,7 @@ import FooterPart from "./footerPart";
 import FourthPart from "./fourthPart";
 import FristPart from "./fristPart";
 import SecondPart from "./secondPart";
+import SixPart from "./sixPart";
 import ThirdPart from "./thirdPart";
 
 
@@ -14,6 +15,7 @@ export default function Homepage() {
         <ThirdPart/>
         <FourthPart/>
         <FifthPage />
+        <SixPart/>
         <FooterPart />
     </div>
   );

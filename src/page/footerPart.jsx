@@ -1,89 +1,11 @@
-import { ChevronLeft, ChevronRight } from "lucide-react";
-import { gymGallery } from "../photos/gymGallery";
-import { useState } from "react";
 import { FaFacebook, FaInstagram, FaPhoneAlt, FaWhatsapp } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import { MdEmail, MdHomeFilled } from "react-icons/md";
 
 
 export default function FooterPart() {
-
-    const [currentIndex, setCurrentIndex] = useState(0);
-    const itemsPerPage = 3;
-    const totalPages = Math.ceil(gymGallery.length / itemsPerPage);
-
-    const nextSlide = () => {
-        setCurrentIndex((prev) => (prev + 1) % totalPages);
-    };
-
-    const prevSlide = () => {
-        setCurrentIndex((prev) => (prev - 1 + totalPages) % totalPages);
-    };
-
-    const goToSlide = (index) => {
-        setCurrentIndex(index);
-    };
-
-    const visibleProducts = gymGallery.slice(
-        currentIndex * itemsPerPage,
-        (currentIndex + 1) * itemsPerPage
-    );
     return (
-        <div className="w-full h-[880px] flex flex-col ">
-            <div className="w-full h-[35px] bg-red-600 flex items-center justify-center">
-                <div className="w-[50%] h-full bg-black flex items-center justify-center">
-                    <h1 className="text-5xl text-white font-bold tracking-[12px]">IMAGE GALLERY</h1>
-                </div>
-            </div>
-
-            <div className="w-full h-[450px] flex items-center justify-center mt-12 ">
-                <div className="w-full h-[400px] flex flex-row  " >
-                    <div className="w-[7%] h-full flex items-center justify-center mx-auto ">
-                        <button
-                            onClick={prevSlide}
-                            className="text-3xl font-bold text-red-600 duration-300 rounded-full border-2 border-red-600 hover:border-black"
-                            aria-label="Previous">
-                            <ChevronLeft className="w-8 h-8" />
-                        </button>
-                    </div>
-
-                    <div className="w-[85%] h-full flex  mx-auto  gap-5 ">
-                        <div className="grid grid-cols-3 gap-3 ">
-                            {visibleProducts.map((gymGallery) => (
-                                <div key={gymGallery.id} className="w-full h-full flex flex-col  cursor-pointer group" >
-                                    <div className="w-full h-[90%] my-auto flex  overflow-hidden group-hover:scale-105 duration-300 ">
-                                        <img
-                                            src={gymGallery.image}
-                                            className="w-full h-full object-cover ">
-                                        </img>
-                                    </div>
-
-                                </div>
-                            ))}
-                        </div>
-                    </div>
-                    <div className="w-[7%] h-full flex items-center justify-center mx-auto ">
-                        <button
-                            onClick={nextSlide}
-                            className="text-3xl font-bold text-red-600 duration-300 rounded-full border-2 border-red-600 hover:border-black"
-                            aria-label="Next">
-                            <ChevronRight className="w-8 h-8" />
-                        </button>
-                    </div>
-                </div>
-
-            </div>
-            <div className="w-full h-[50px] flex items-center justify-center gap-3 ">
-                {Array.from({ length: totalPages }).map((_, index) => (
-                    <button
-                        key={index}
-                        onClick={() => goToSlide(index)}
-                        className={`w-4 h-4 rounded-full transition-all duration-300 ${currentIndex === index ? "bg-red-600" : "bg-white"
-                            }`}
-                        aria-label={`Go to slide ${index + 1}`}
-                    />
-                ))}
-            </div>
+        <div className="w-full h-[380px] flex flex-col ">
             <div className="w-full h-[300px] bg-red-600 flex items-center justify-center mt-12">
                 <div className="w-[80%] h-[280px] ">
                     <div className="grid grid-cols-4 w-full h-full">
