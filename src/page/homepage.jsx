@@ -6,6 +6,8 @@ import FristPart from "./fristPart";
 import SecondPart from "./secondPart";
 import SixPart from "./sixPart";
 import ThirdPart from "./thirdPart";
+import RegistrationForm from "../components/RegistrationForm";
+import { useState } from "react";
 
 
 
@@ -17,6 +19,8 @@ export default function Homepage() {
   const instructorsRef = useRef(null);
   const membershipRef = useRef(null);
   const contactRef = useRef(null);
+
+   const [showRegistration, setShowRegistration] = useState(false);
 
 
   const scrollToSection = (ref) => {
@@ -38,8 +42,13 @@ export default function Homepage() {
   };
   return (
     <div className="w-full min-h-screen bg-black">
+      {showRegistration && <RegistrationForm onClose={() => setShowRegistration(false)} />}
       <div>
-        <FristPart scrollToSection={scrollToSection} refs={refs} />
+        <FristPart 
+        scrollToSection={scrollToSection} 
+        refs={refs}
+        onJoinClick={() => setShowRegistration(true)}
+         />
       </div>
       <div ref={aboutRef}>
         <SecondPart />

@@ -1,7 +1,7 @@
 import { FaPeopleGroup } from "react-icons/fa6";
 import Header from "../components/header";
 
-export default function FristPart({ scrollToSection, refs }) {
+export default function FristPart({ scrollToSection, refs, onJoinClick}) {
     return (
         <>
             <div className="bg-[url(/public/homepage1.png)] w-full h-[670px] bg-cover  flex flex-col ">
@@ -11,7 +11,9 @@ export default function FristPart({ scrollToSection, refs }) {
                     <span className="text-[65px] text-white font-thin  -mt-4">Your Body Today</span>
                 </div>
                 <div className=" ml-20 mt-20 flex group w-[200px] h-[60px] ">
-                    <button className="w-[200px] h-[60px] flex flex-row justify-center items-center  border-2 border-red-600  group-hover:bg-red-50">
+                    <button 
+                    onClick={onJoinClick}
+                    className="w-[200px] h-[60px] flex flex-row justify-center items-center  border-2 border-red-600  group-hover:bg-red-50">
                         <span className="text-white text-2xl group-hover:text-red-600">Join Us Now</span>
                     </button>
 

@@ -85,7 +85,7 @@ export default function SixPart() {
                 </div>
             </div>
 
-            <div className="w-full h-[580px] flex flex-col ">
+            <div className="w-full h-[580px] flex flex-col mt-20 ">
                 <div className="w-full h-[35px] bg-red-600 flex items-center justify-center">
                     <div className="w-[50%] h-full bg-black flex items-center justify-center">
                         <h1 className="text-5xl text-white font-bold tracking-[12px]">IMAGE GALLERY</h1>
