@@ -12,7 +12,9 @@ export default function RegistrationForm({ onClose }) {
     };
 
     return (
-        <div className='w-[70%] mx-auto  h-[680px] flex flex-col items-center justify-start bg-black pt-4 inset-0 z-50  backdrop-blur-sm fixed '>
+        <>
+        <div className="fixed inset-0 z-40 backdrop-blur-md bg-black/30"></div>
+        <div className='w-[70%] mx-auto  h-[670px] flex flex-col items-center justify-start bg-black backdrop-blur-md  inset-0 z-50  pt-4 fixed '>
             <div className="w-full h-[90vh] flex flex-col items-center justify-start bg-black overflow-y-auto  ">
                 <div className="w-full h-[20px] bg-red-600 flex items-center justify-center">
                     <div className="w-[50%] h-full bg-black flex items-center justify-center">
@@ -122,5 +124,6 @@ export default function RegistrationForm({ onClose }) {
             </div>
 
         </div>
+        </>
     );
 }
