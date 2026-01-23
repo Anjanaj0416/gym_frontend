@@ -1,11 +1,11 @@
 import { FaPeopleGroup } from "react-icons/fa6";
 import Header from "../components/header";
 
-export default function FristPart() {
+export default function FristPart({ scrollToSection, refs }) {
     return (
         <>
             <div className="bg-[url(/public/homepage1.png)] w-full h-[670px] bg-cover  flex flex-col ">
-                <Header />
+                <Header scrollToSection={scrollToSection} refs={refs}/>
                 <div className=" w-[500px] h-[200px] mt-20 ml-28 flex flex-col  justify-center items-center leading-none">
                     <span className="text-[200px] text-white font-semibold tracking-[-8px]  ">SHAPE</span>
                     <span className="text-[65px] text-white font-thin  -mt-4">Your Body Today</span>
